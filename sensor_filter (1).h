@@ -1,16 +1,4 @@
-/**
- * @file    sensor_filter.h
- * @brief   UKB Kurtarma Sistemi – Sensör Filtreleme Katmanı
- *
- * Kapsam    : BMP180 (basınç/irtifa), MPU6050 (6-eksen IMU), ADXL345 (3-eksen ivme)
- * Gereksinim: REQ-SEN-001 – Ham sensör verisi FSM'ye doğrudan iletilmez;
- *             tüm değerler bu modülden geçirilir.
- *
- * Filtre Zinciri:
- *   BMP180  → Outlier koruması → EMA (basınç) → İrtifa hesabı → EMA (irtifa)
- *   MPU6050 → Jiroskop kalibrasyonu → Tamamlayıcı filtre (pitch/roll)
- *   ADXL345 → Medyan filtre (N=5) → EMA (her eksen)
- */
+
 
 #ifndef SENSOR_FILTER_H
 #define SENSOR_FILTER_H
