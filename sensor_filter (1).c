@@ -1,14 +1,4 @@
-/**
- * @file    sensor_filter.c
- * @brief   UKB Sensör Filtreleme Katmanı – Implementasyon
- *
- * REQ-SEN-001 KARŞILANMA KANITI:
- *   Bu dosyadaki hiçbir fonksiyon ham sensör verisini doğrudan
- *   sensorData yapısına yazmaz. Her değer en az bir filtre aşamasından
- *   geçtikten sonra FSM'ye iletilir.
- *
- * Derleme notu: STM32CubeIDE'de math.h için linker'a -lm eklenmelidir.
- */
+
 
 #include "sensor_filter.h"
 #include <string.h>    /* memcpy */
