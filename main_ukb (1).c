@@ -1,20 +1,3 @@
-/**
- * @file    main_ukb.c
- * @brief   UKB Ana Döngü – DMA Entegrasyonu + FSM İskeleti
- *
- * Bu dosya şunları gösterir:
- *  1. DMA ile kesintisiz UART dinleme
- *  2. HAL_UART_RxCpltCallback içinde Big-Endian → filtreleme → sensorData akışı
- *  3. FSM'nin yalnızca sensorData'yı (filtrelenmiş) okuması
- *  4. 100ms'de bir telemetri paketi gönderimi (DMA TX)
- *
- * UYARI: Bu dosya gerçek HAL include'larını kullanır ancak
- *        vendor dosyaları (stm32f4xx_hal.h vb.) projeye dahil edilmelidir.
- */
-
-/* ─── STM32 HAL (vendor tarafından sağlanır) ────────────────────────────── */
-/* #include "stm32f4xx_hal.h" */
-/* #include "usart.h" */
 
 #include "sensor_filter.h"
 #include <string.h>
